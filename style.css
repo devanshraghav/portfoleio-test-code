@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fs {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(31, 31, 31);
+}
+
+.ele {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgb(58, 214, 163);
+}
+.white {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  background-color: #dadada;
+}
