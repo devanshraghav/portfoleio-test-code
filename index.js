@@ -1,38 +1,18 @@
-var t1 = gsap.timeline();
+const hamburger = document.getElementById("hamburger");
+const menu = document.querySelector(".menu");
 
-t1.to(".fs", {
-  height: 0,
-  duration: 2,
-  ease: Expo.easeInOut,
+
+hamburger.addEventListener("click", function () {
+  const hamIcon = this.querySelector(".hamburger-icon");
+  const crossIcon = this.querySelector(".cross-icon");
+
+  if (hamIcon.style.display === "none") {
+    crossIcon.style.display = "none";
+    hamIcon.style.display = "inline-block";
+    menu.style.display = "none";
+  } else {
+    hamIcon.style.display = "none";
+    crossIcon.style.display = "inline-block";
+    menu.style.display = "block";
+  }
 });
-t1.to(".ele", {
-  height: "100%",
-  duration: 2,
-  delay: -2,
-  ease: Expo.easeInOut,
-});
-t1.to(".white", {
-  height: "100%",
-  duration: 2,
-  delay: -1.6,
-  ease: Expo.easeInOut,
-});
-
-function revealToSpan() {
-  document.querySelectorAll(".reveal").forEach(function (element) {
-    let parentSpan = document.createElement("span");
-    let childSpan = document.createElement("span");
-
-    parentSpan.classList.add("parentSpan");
-    childSpan.classList.add("childSpan");
-
-    childSpan.textContent = element.textContent;
-
-    parentSpan.appendChild(childSpan);
-
-    element.innerHTML = "";
-    element.appendChild(parentSpan);
-  });
-}
-
-revealToSpan();
